@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      div.footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        color: black;
+        text-align: center;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAADJCAMAAADSHrQyAAAAkFBMVEX////rHCTqAADrFR7qABHrGSHqAAjqAA3//PzqABLqAAnrERv6ysvxaGzqCxf83d74ubv2p6nwXmL0lJf+8/P5w8XxbXD84uPvUlf1oaP0jZDtPUL96Oj+7u71mZz82tzzgIT3srTuQ0ntNTzyeXzsLzX70dLzhon5v8DsISr1nJ/vT1TvW1/ycnbtKjH0jpF5xDifAAAEtUlEQVR4nO3caXOqSBQGYDhNswg2u0pQAdHgmvz/fzdNbiY3AqlkUomM8D5foreSqnPs7tObXEUBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGCXTzVZm30H04nHtrRr/ZM4dr0ieq3y7zavQL/bOfICfzfIh2L9/v8r8fHEgIn1iWKJmacZEvqfDIj86877i/HlucIj/vov2+YaTIWyuduBMGGTtguSxv3h/znJK1dubLNwQCdaZ9vtPwDZIDxK3x7B/wlEj7/Xl/KEkjX2S9l+2oafPd5y+GRA5f17GC7K+nvgfzKLUb5bIO2FuNPJfXjkp2R91cGbbQjN0eiXrn2YJ22acy7HBJixf9pzGtwQaO9U/VwF1Nnk9romn51keJnKKexHLeS+sttPzptwdRP1ZEG3vr+0LUvV6sD+qoiNvoROfJvEy+mBSN80oilbu3n9Y6K+9547IPksysZjadd0mdVZ8fR5fet7nv/R/kpHKuZzejVbqghZe1Hd4v8rTVX5QlLI51O3JdkArt26Frqoke3wjdTrd8aT9VXXW5G4bdU5P+o7rFpYydyucXs/retF3WLexYSrfpVeVTsz6DupGPNnw/LrI63c2V33fqbWONUYx2mtZs8bLMTDAo5luSSt5EfQd081c9FavPw97RfdOYLRansWf/9kgmEGr5TnN7nJH/g2X1piXe5mHkXT8dcce1uDrcRT8mLfPLrghwlG0/WrR0fTcYOPI3re6jq00o7q/k7j/btl5XMktoxpDzY/Tjo4vd7mTfAxtXzx9kP3zGMa9/6R3ZC9rvj+CGc9M1M7sqXT6Du0GZPbtQ2tVZTQbQ8eP1rbWNewPo9jjRJXRNd1T2HdgNzGfdpV8mvYd1204Tx0dfzKSUx1z297cqpOxnGEXHf3+/m6bvylunemonI1hhVvz293eGEexl06tzR1X+47pVvzWMa5KY1jf1Zz6yq6R+wiu51/IdmfXN7UqjeEwo7Zh3Npf93vqO6YbkXWevORqgWePZF27J06FaV31eRrDRr7+MpIwYmVxdUlvn/qO6hbkep7OkXKyrkf74L9+JsU7Ep7iltcbeRrB9zLcgIRcvIaNQ3vK+w7s1y0vVN/ExuWksawZfI3PZnRYm8rjpnlT8+7hkmGKF1R68sepmTkb+NZ9ddRp6ypm8dR6jEIvB13h44A2nqnM80PrfkJQOOCbGbeicr1SomJDopm5TdPhbmDm6x0LZZ92Lrx9FS1oMYgnAbssj2m6lolnlWg3OTe0WdZ3hL9kfjxNi5VM/Dklq5W4IDscZokz3WQW1t3ZfT50PBgoiE8HegXn+H5cnzc7VdlucSaIpoN8XsiMMsepE4v2F7vV4lxM9HIbD3JOM6PVy/2CmwRao7hxJiZkz/xBH0dGe7mAMezrbm4QSy/FoPM2H8OF8a7BObMtnai8HB+Hu4JR6ryThU2a/W/Ssq11NT0/eNkgh/ebyAkDThObyZS1+n+vsNJplcTuwC8XzXmR716eXjfYYbc5b8MizoY4gzWsnGMenGfbau17TuYuR5DyG9Mc9lAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAX/QPjLo/CCypqOAAAAAASUVORK5CYII="
+    />
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><b>MyClassRoom</b></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <span class="navbar-text">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/Data/Entry">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/Data/Entry/Notices">New Notice(s)</a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </nav>
+    </div>
+    <br />
+    <div class="container">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
+      <div class="alert alert-{{ category }}" role="alert">
+        <span>{{ message }}</span>
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+    </div>
+    <br />
+    <br />
+    {% block body %} {% endblock %}
+    <br />
+    <div class="footer">
+      <h5>Copyright © 2020 MyClassRoom</h5>
+    </div>
+  </body>
+</html>

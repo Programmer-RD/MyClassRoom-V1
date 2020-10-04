@@ -1,0 +1,32 @@
+{% extends "/data_entry/base.html" %} {% block head %}
+<title>Add Notice</title>
+{% endblock %} {% block body %}
+<div class="container">
+  <div class="jumbotron">
+    <form method="POST">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          name="T"
+          required
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          required
+          name="D"
+          id="exampleInputPassword1"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary">Add Notice</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
