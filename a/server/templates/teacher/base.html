@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body.first_page {
+        background-color: lightslategray;
+      }
+      div.footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        color: black;
+        text-align: center;
+      }
+      div.things {
+        background-color: lightslategray;
+        width: 50%;
+        padding: 40px;
+        margin: 100px auto;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+      }
+      form {
+        color: black;
+      }
+
+      .button {
+        color: black;
+        text-transform: uppercase;
+        text-decoration: none;
+        background: white;
+        padding: 20px;
+        border-radius: 5px;
+        display: inline-block;
+        border: none;
+        transition: all 0.4s ease 0s;
+      }
+      .button:hover {
+        background: black;
+        color: white;
+        letter-spacing: 1px;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+        transition: all 0.4s ease 0s;
+      }
+    </style>
+    {% block head %} {% endblock %}
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://cdn1.vectorstock.com/i/1000x1000/24/30/th-logo-letter-monogram-slash-with-modern-logo-vector-27982430.jpg"
+    />
+  </head>
+  <body class="first_page">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><b>MyClassRoom</b></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#MyClassRoom"
+        aria-controls="MyClassRoom"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="MyClassRoom">
+        <div class="navbar-nav">
+          <a class="nav-link" href="/Teacher/Temporary">Home</a>
+          <a class="nav-link" href="/Teacher/Add">Add</a>
+          <a class="nav-link" href="/Teacher/Logout">Logout</a>
+        </div>
+      </div>
+    </nav>
+    <br />
+    <div class="container">
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
+      <div class="alert alert-{{ category }}" role="alert">
+        <span>{{ message }}</span>
+      </div>
+      {% endfor %} {% endif %} {% endwith %}
+    </div>
+    <br />
+    <div class="container">{% block body %} {% endblock %}</div>
+    <br />
+    <div class="footer">
+      <h5>Copyright © 2020 MyClassRoom</h5>
+    </div>
+  </body>
+</html>
